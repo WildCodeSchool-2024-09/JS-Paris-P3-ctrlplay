@@ -6,6 +6,21 @@ import publisherRepository from "../publisher/publisherRepository";
 import tagRepository from "../tag/tagRepository";
 import gameRepository from "./gameRepository";
 
+const browseGame: RequestHandler = async (req, res, next) => {
+	try {
+		const items = await gameRepository.readAll(req.query);
+
+		const modifiedGame = items.map((game) => {
+			const { description, ...rest } = game;
+			return rest;
+		});
+
+		res.json(modifiedGame);
+	} catch (err) {
+		next(err);
+	}
+};
+
 const read: RequestHandler = async (req, res, next) => {
 	try {
 		const gameId = Number(req.params.id);
@@ -45,4 +60,4 @@ const browseReco: RequestHandler = async (req, res, next) => {
 	}
 };
 
-export default { read, browseReco };
+export default { read, browseReco, browseGame };

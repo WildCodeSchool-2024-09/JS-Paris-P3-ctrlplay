@@ -19,14 +19,18 @@ function GameDevices({
 
 	return (
 		<>
-			{devices.map((device) => (
-				<img
-					src={devicesURL[device]}
-					alt={device}
-					key={device}
-					className="device-picto"
-				/>
-			))}
+			{devices ? (
+				devices.map((device) => (
+					<img
+						src={devicesURL[device]}
+						alt={device}
+						key={device}
+						className="device-picto"
+					/>
+				))
+			) : (
+				<></>
+			)}
 		</>
 	);
 }

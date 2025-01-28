@@ -1,0 +1,15 @@
+body {
+	background: var(--background-gradient);
+	min-height: 100vh;
+}
+
+p {
+	color: var(--white);
+	font-family: var(--font-paragraph);
+}
+
+.game-card {
+	display: flex;
+	height: 300px;
+	width: 300px;
+}

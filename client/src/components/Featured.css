@@ -1,0 +1,111 @@
+#featured {
+	height: 550px;
+	position: relative;
+	overflow: hidden;
+}
+
+.featured-title {
+	display: flex;
+	justify-content: flex-start;
+	margin: 2%;
+}
+
+.featured-slider {
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.featured-card {
+	display: flex;
+
+	align-items: flex-end;
+	width: 100%;
+}
+
+.game-item {
+	display: flex;
+	margin-left: 5%;
+}
+
+.game-image {
+	max-width: 450px;
+	height: 350px;
+	border-radius: 10px;
+	border: 2px solid #a661d0;
+	cursor: pointer;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	margin-left: 10%;
+}
+
+.thumb-text {
+	margin-left: 10%;
+	height: 43vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.game-thumbnail {
+	margin-top: 10px;
+	width: 300px;
+	height: auto;
+	border-radius: 5px;
+	border: 2px solid #a661d0;
+	cursor: pointer;
+	transition: transform 0.2s ease, opacity 0.3s ease;
+	margin-bottom: 5vh;
+}
+
+.game-thumbnail:hover {
+	opacity: 0.8;
+}
+
+.game-name {
+	font-family: var(--font-title);
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 1rem;
+	color: white;
+}
+
+.game-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	margin-right: 20%;
+}
+
+.arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	padding: 20px;
+	width: 60px;
+	height: 60px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.arrow.left {
+	left: 30px;
+	background-image: url("../assets/images/button_icons/buttomfleche.png");
+	background-color: transparent;
+}
+
+.arrow.left:hover,
+.arrow.right:hover {
+	opacity: 0.7;
+}
+
+.arrow.right {
+	right: 30px;
+	background-image: url("../assets/images/button_icons/buttomflecheright.png");
+	background-color: transparent;
+}

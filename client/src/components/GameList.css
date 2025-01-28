@@ -1,0 +1,42 @@
+#box-principal {
+	background-color: #18181b;
+	padding: 30px;
+	position: relative;
+	text-align: center;
+	margin-top: 2%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 2%;
+	border-radius: 30px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mainh2 {
+	display: flex;
+	justify-content: flex-start;
+	margin: 2%;
+}
+
+.recent-releases-list,
+.all-time-favorites-list {
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	gap: 15px;
+	overflow: hidden;
+	transition: transform 0.5s ease-in-out;
+}
+
+.recent-releases,
+.all-time-favorites {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#more-btn,
+#more-btn2 {
+	color: white;
+	font-size: 14px;
+}
