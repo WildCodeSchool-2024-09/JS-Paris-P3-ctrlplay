@@ -47,7 +47,7 @@ function UserPage() {
 
 	const [gamesReco, setGamesReco] = useState<GameType[]>();
 	useEffect(() => {
-		fetch(`${import.meta.env.VITE_API_URL}/api/users/recommandation/${user.id}`)
+		fetch(`${import.meta.env.VITE_API_URL}/api/users/${user.id}/recommandation`)
 			.then((res) => res.json())
 			.then((data) => setGamesReco(data));
 	});
