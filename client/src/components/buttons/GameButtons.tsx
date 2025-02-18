@@ -27,9 +27,9 @@ function GameButtons({ game }: GameCardProps) {
 	const location = useLocation();
 	const hideInfoButton = location.pathname === `/game/${game.id}`;
 
-	if (user) {
-		// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-		useEffect(() => {
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+	useEffect(() => {
+		if (user) {
 			if (!user.id || !game.id) {
 				toast.error("UserId and GameId required", { theme: "dark" });
 			}
@@ -61,8 +61,8 @@ function GameButtons({ game }: GameCardProps) {
 			};
 
 			checkLibrary();
-		}, [game.id, user, isFavorite, isInLibrary, setIsInLibrary, setIsFavorite]);
-	}
+		}
+	}, [game.id, user, isFavorite, isInLibrary, setIsInLibrary, setIsFavorite]);
 
 	return (
 		<div className="button-container">
